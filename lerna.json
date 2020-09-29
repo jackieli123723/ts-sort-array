@@ -1,0 +1,17 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "command": {
+    "version": {
+      "allowBranch": "master",
+      "includeMergedTags": true
+    },
+    "publish": {
+      "registry": "https://registry.npmjs.org/"
+    }
+  },
+  "version": "0.0.0",
+  "useWorkspaces": true,
+  "npmClient": "yarn"
+}

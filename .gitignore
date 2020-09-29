@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+package-lock.json
+yarn.lock
+use.md
+packages/**/*/dist
+packages/**/*/esm
+packages/**/*/umd
+lerna-debug.log

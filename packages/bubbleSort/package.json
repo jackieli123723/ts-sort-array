@@ -1,0 +1,54 @@
+{
+  "name": "ts-sort-bubble",
+  "version": "1.2.0-alpha.0",
+  "description": "bubble sort an array in typescript",
+  "main": "dist/index.js",
+  "umd:main": "umd/index.js",
+  "browser": "umd/index.js",
+  "unpkg": "umd/index.js",
+  "jsdelivr": "umd/index.js",
+  "module": "esm/index.js",
+  "jsnext:main": "esm/index.js",
+  "react-native": "esm/index.js",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "source": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "esm",
+    "umd",
+    "LICENSE",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "postCompile": true,
+  "scripts": {
+    "build": "rimraf dist && rimraf esm && rimraf umd && tsc --outDir dist --module CommonJS --target ES5 && tsc --outDir esm --module ES2015  --target ES6 && tsc --outDir umd --module UMD --target ES5",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "bubbleSort",
+    "sort",
+    "bubble",
+    "ts",
+    "bubble Sort",
+    "typescript"
+  ],
+  "author": "jackieli",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackieli123723/ts-sort-array"
+  },
+  "bugs": {
+    "url": "https://github.com/jackieli123723/ts-sort-array/issues"
+  },
+  "homepage": "https://github.com/jackieli123723/ts-sort-array/packages/bubbleSort/README.md",
+  "devDependencies": {
+    "@types/node": "^14.11.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "gitHead": "0b418a79ce4cf68e4f32e90571a3fb6e95acce41"
+}

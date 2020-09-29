@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "module": "CommonJS",
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "target": "ES5",
+      "sourceMap": false,
+      "declaration": true,
+      "strict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "noFallthroughCasesInSwitch": true,
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"]
+      },
+      "outDir": "./dist",
+    },
+    "exclude": ["node_modules"]
+  }

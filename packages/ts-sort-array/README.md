@@ -42,7 +42,11 @@ yarn add  ts-sort-utils -D
 
 
 
-### Usages Api for  cjs
+
+## Usages Api
+
+
+### cjs
 
 ```js
     require("ts-sort-utils").bubbleSort,
@@ -78,7 +82,7 @@ yarn add  ts-sort-utils -D
 
 ```
 
-### Usages Api for es6
+### es6
 
 ```js
 import {
