@@ -1,6 +1,6 @@
 {
   "name": "ts-sort-quick",
-  "version": "1.2.0-alpha.0",
+  "version": "1.0.0",
   "description": "quick sort an array, fast in typescript",
   "main": "dist/index.js",
   "umd:main": "umd/index.js",

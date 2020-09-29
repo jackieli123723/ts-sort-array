@@ -1,6 +1,6 @@
 {
   "name": "ts-sort-bubble",
-  "version": "1.2.0-alpha.0",
+  "version": "1.0.0",
   "description": "bubble sort an array in typescript",
   "main": "dist/index.js",
   "umd:main": "umd/index.js",
