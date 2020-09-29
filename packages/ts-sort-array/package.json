@@ -1,6 +1,6 @@
 {
   "name": "ts-sort-utils",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A set of packages to help you to learn array sort by typescript",
   "main": "dist/index.js",
   "umd:main": "umd/index.js",
@@ -74,16 +74,16 @@
   },
   "homepage": "https://github.com/jackieli123723/ts-sort-array#readme",
   "dependencies": {
-    "ts-sort-bubble": "^1.0.1",
-    "ts-sort-bucket": "^1.0.1",
-    "ts-sort-counting": "^1.0.1",
-    "ts-sort-heap": "^1.0.1",
-    "ts-sort-insertion": "^1.0.1",
-    "ts-sort-merge": "^1.0.1",
-    "ts-sort-quick": "^1.0.1",
-    "ts-sort-radix": "^1.0.1",
-    "ts-sort-selection": "^1.0.1",
-    "ts-sort-shell": "^1.0.1"
+    "ts-sort-bubble": "^1.0.0",
+    "ts-sort-bucket": "^1.0.0",
+    "ts-sort-counting": "^1.0.0",
+    "ts-sort-heap": "^1.0.0",
+    "ts-sort-insertion": "^1.0.0",
+    "ts-sort-merge": "^1.0.0",
+    "ts-sort-quick": "^1.0.0",
+    "ts-sort-radix": "^1.0.0",
+    "ts-sort-selection": "^1.0.0",
+    "ts-sort-shell": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^14.11.1",
@@ -91,5 +91,5 @@
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
   },
-  "gitHead": "cbec7e0725fa1edae1ed176c86991a1cb7b395cb"
+  "gitHead": "b368fed6d5655aca683fde7448c6db210c94dd24"
 }
