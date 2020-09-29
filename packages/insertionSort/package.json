@@ -1,6 +1,6 @@
 {
   "name": "ts-sort-insertion",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "insertion sort an array in typescript",
   "main": "dist/index.js",
   "umd:main": "umd/index.js",
@@ -50,5 +50,5 @@
     "ts-node": "^9.0.0",
     "typescript": "^4.0.3"
   },
-  "gitHead": "0b418a79ce4cf68e4f32e90571a3fb6e95acce41"
+  "gitHead": "cbec7e0725fa1edae1ed176c86991a1cb7b395cb"
 }
