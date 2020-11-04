@@ -1,6 +1,6 @@
 {
   "name": "ts-sort-utils",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A set of packages to help you to learn array sort by typescript",
   "main": "dist/index.js",
   "umd:main": "umd/index.js",
