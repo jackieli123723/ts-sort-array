@@ -9,6 +9,7 @@ import { radixSort, radixSortSync, radixSortAsync } from 'ts-sort-radix'
 import { selectionSort, selectionSortSync, selectionSortAsync } from 'ts-sort-selection'
 import { shellSort, shellSortSync, shellSortAsync } from 'ts-sort-shell'
 
+//不兼容umd 要使用rollup 或者webpack 
 export {
     bubbleSort,
     bubbleSortSync,
@@ -41,10 +42,5 @@ export {
     shellSortSync,
     shellSortAsync
 }
-
-
-
-
-
 
 

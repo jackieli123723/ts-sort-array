@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
       "module": "CommonJS",
-      "esModuleInterop": true,
+      "esModuleInterop": true,//  允许 export = xxx 导出 ，并使用 import xxx form "module-name" 导入 /
+      "allowSyntheticDefaultImports": true, // 允许引入没有默认导出的模块
+      "allowUmdGlobalAccess": true,
       "moduleResolution": "node",
       "target": "ES5",
       "sourceMap": false,

@@ -1,0 +1,11 @@
+{
+    "extends": "../../tsconfig.json",
+    "include": ["src/**/*"],
+    "exclude": ["node_modules/**"],
+    "compilerOptions": {
+        "module": "ES2015", //amd umd commonjs esnext ES2015 ||  commonjs
+        "target": "es5",
+        "lib": ["dom", "es6"], //dom , esnext
+        "declaration": false
+    }
+}

@@ -73,6 +73,37 @@ heapSortAsync([3,4,57,2,100,27,343]).then((res) => {
 ```
 
 
+
+## umd web browser use  [sync + callback + Promise + Async Await]
+
+```js
+
+<script src="https://unpkg.com/ts-sort-heap@1.0.1/umd/index.js"></script>
+
+
+tsSortHeap.heapSort([3,4,57,2,100,27,343],function(data){
+    console.log("heapSort cb",data.join('-'))// output: 2-3-4-27-57-100-343
+})
+
+console.log('heapSortSync sync',tsSortHeap.heapSortSync([3,4,57,2,100,27,343]))
+
+tsSortHeap.heapSortAsync([3,4,57,2,100,27,343]).then((res) => {
+  console.log('heapSortASync promise',res) // output: [2,3, 4, 27, 57,100,343]
+}).catch((error) => {
+  console.log('err',error)
+})
+
+(async function () {
+  var array4 = [3,4,57,2,100,27,343]
+  var les = await tsSortHeap.heapSortAsync(array4)
+  console.log('heapSortAsyncAwait await',les) // output: [2,3, 4, 27, 57,100,343]
+})()
+
+
+
+```
+
+
 ## API
 ### heapSortSync: (arr: number[]) => any;
 ### heapSort: (arr: number[], callback: (data: number) => void) => any;

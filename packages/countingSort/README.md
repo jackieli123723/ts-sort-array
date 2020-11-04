@@ -72,6 +72,35 @@ countingSortAsync([3,4,57,2,100,27,343]).then((res) => {
 ```
 
 
+## umd web browser use  [sync + callback + Promise + Async Await]
+
+```js
+
+<script src="https://unpkg.com/ts-sort-counting@1.0.1/umd/index.js"></script>
+
+tsSortCounting.countingSort([3,4,57,2,100,27,343],function(data){
+    console.log("countingSort cb",data.join('-'))// output: 2-3-4-27-57-100-343
+})
+
+console.log('countingSortSync sync',tsSortCounting.countingSortSync([3,4,57,2,100,27,343]))
+
+tsSortCounting.countingSortAsync([3,4,57,2,100,27,343]).then((res) => {
+  console.log('countingSortASync promise',res) // output: [2,3, 4, 27, 57,100,343]
+}).catch((error) => {
+  console.log('err',error)
+})
+
+(async function () {
+  var array4 = [3,4,57,2,100,27,343]
+  var les = await tsSortCounting.countingSortAsync(array4)
+  console.log('countingSortAsyncAwait await',les) // output: [2,3, 4, 27, 57,100,343]
+})()
+
+
+
+```
+
+
 ## API
 ### countingSortSync: (arr: number[]) => any;
 ### countingSort: (arr: number[], callback: (data: number) => void) => any;

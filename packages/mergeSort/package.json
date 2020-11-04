@@ -10,20 +10,27 @@
   "module": "esm/index.js",
   "jsnext:main": "esm/index.js",
   "react-native": "esm/index.js",
-  "types": "dist/index.d.ts",
-  "typings": "dist/index.d.ts",
-  "source": "dist/index.d.ts",
+  "types": "types/index.d.ts",
+  "typings": "types/index.d.ts",
+  "source": "types/index.d.ts",
   "files": [
+    "types",
     "dist",
     "esm",
     "umd",
     "LICENSE",
     "README.md"
   ],
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./esm/index.js"
+  },
   "sideEffects": false,
   "postCompile": true,
   "scripts": {
-    "build": "rimraf dist && rimraf esm && rimraf umd && tsc --outDir dist --module CommonJS --target ES5 && tsc --outDir esm --module ES2015  --target ES6 && tsc --outDir umd --module UMD --target ES5",
+    "build:umd": "rollup -c ../../rollup.config.js --name tsSortMerge",
+    "build:tscumdnotwork": "tsc --outDir umd --module UMD --target ES3",
+    "build": "rimraf dist && rimraf esm && rimraf umd && tsc --outDir dist --module CommonJS --target ES5 && tsc --outDir esm --module ES2015  --target ES6 && npm run build:umd ",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -45,9 +52,13 @@
   },
   "homepage": "https://github.com/jackieli123723/ts-sort-array/packages/mergeSort/README.md",
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^10.0.0",
     "@types/node": "^14.11.1",
     "rimraf": "^3.0.2",
+    "rollup": "^2.33.1",
+    "rollup-plugin-typescript2": "^0.29.0",
     "ts-node": "^9.0.0",
+    "ttypescript": "^1.5.12",
     "typescript": "^4.0.3"
   },
   "gitHead": "b368fed6d5655aca683fde7448c6db210c94dd24"

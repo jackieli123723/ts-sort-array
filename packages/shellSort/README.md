@@ -73,6 +73,37 @@ shellSortAsync([3,4,57,2,100,27,343]).then((res) => {
 ```
 
 
+
+
+## umd web browser use  [sync + callback + Promise + Async Await]
+
+```js
+
+<script src="https://unpkg.com/ts-sort-shell@1.0.1/umd/index.js"></script>
+
+
+tsSortShell.shellSort([3,4,57,2,100,27,343],function(data){
+    console.log("shellSort cb",data.join('-'))// output: 2-3-4-27-57-100-343
+})
+
+console.log('shellSortSync sync',tsSortShell.shellSortSync([3,4,57,2,100,27,343]))
+
+tsSortShell.shellSortAsync([3,4,57,2,100,27,343]).then((res) => {
+  console.log('shellSortASync promise',res) // output: [2,3, 4, 27, 57,100,343]
+}).catch((error) => {
+  console.log('err',error)
+})
+
+(async function () {
+  var array4 = [3,4,57,2,100,27,343]
+  var les = await tsSortShell.shellSortAsync(array4)
+  console.log('shellSortAsyncAwait await',les) // output: [2,3, 4, 27, 57,100,343]
+})()
+
+
+```
+
+
 ## API
 ### shellSortSync: (arr: number[]) => any;
 ### shellSort: (arr: number[], callback: (data: number) => void) => any;

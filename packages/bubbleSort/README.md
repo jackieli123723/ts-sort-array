@@ -70,6 +70,31 @@ bubbleSortAsync([3,4,57,2,100,27,343]).then((res) => {
 
 ```
 
+## umd web browser use  [sync + callback + Promise + Async Await]
+
+```js
+
+<script src="https://unpkg.com/ts-sort-bubble@1.0.1/umd/index.js"></script>
+
+tsSortBubble.bubbleSort([3,4,57,2,100,27,343],function(data){
+    console.log("bubbleSort cb",data.join('-'))// output: 2-3-4-27-57-100-343
+})
+
+console.log('bubbleSortSync sync',tsSortBubble.bubbleSortSync([3,4,57,2,100,27,343]))
+
+tsSortBubble.bubbleSortAsync([3,4,57,2,100,27,343]).then((res) => {
+  console.log('bubbleSortASync promise',res) // output: [2,3, 4, 27, 57,100,343]
+}).catch((error) => {
+  console.log('err',error)
+})
+
+(async function () {
+  var array4 = [3,4,57,2,100,27,343]
+  var les = await tsSortBubble.bubbleSortAsync(array4)
+  console.log('bubbleSortAsyncAwait await',les) // output: [2,3, 4, 27, 57,100,343]
+})()
+
+```
 
 ## API
 ### bubbleSortSync: (arr: number[]) => any;

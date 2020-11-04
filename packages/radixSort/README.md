@@ -72,6 +72,34 @@ radixSortAsync([3,4,57,2,100,27,343]).then((res) => {
 ```
 
 
+
+## umd web browser use  [sync + callback + Promise + Async Await]
+
+```js
+
+<script src="https://unpkg.com/ts-sort-radix@1.0.1/umd/index.js"></script>
+
+tsSortRadix.radixSort([3,4,57,2,100,27,343],function(data){
+    console.log("radixSort cb",data.join('-'))// output: 2-3-4-27-57-100-343
+})
+
+console.log('radixSortSync sync',tsSortRadix.radixSortSync([3,4,57,2,100,27,343]))
+
+tsSortRadix.radixSortAsync([3,4,57,2,100,27,343]).then((res) => {
+  console.log('radixSortASync promise',res) // output: [2,3, 4, 27, 57,100,343]
+}).catch((error) => {
+  console.log('err',error)
+})
+
+(async function () {
+  var array4 = [3,4,57,2,100,27,343]
+  var les = await tsSortRadix.radixSortAsync(array4)
+  console.log('radixSortAsyncAwait await',les) // output: [2,3, 4, 27, 57,100,343]
+})()
+
+```
+
+
 ## API
 ### radixSortSync: (arr: number[]) => any;
 ### radixSort: (arr: number[], callback: (data: number) => void) => any;
