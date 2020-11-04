@@ -1,6 +1,6 @@
 {
   "name": "ts-sort-merge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "merge sort an array in typescript",
   "main": "dist/index.js",
   "umd:main": "umd/index.js",
