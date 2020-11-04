@@ -68,7 +68,7 @@ bucketSortAsync([3,4,57,2,100,27,343]).then((res) => {
 
 
 ```
-
+  
 
 ## umd web browser use  [sync + callback + Promise + Async Await]
 

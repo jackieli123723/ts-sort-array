@@ -81,16 +81,16 @@
   },
   "homepage": "https://github.com/jackieli123723/ts-sort-array#readme",
   "dependencies": {
-    "ts-sort-bubble": "^1.0.1",
-    "ts-sort-bucket": "^1.0.1",
-    "ts-sort-counting": "^1.0.1",
-    "ts-sort-heap": "^1.0.1",
-    "ts-sort-insertion": "^1.0.1",
-    "ts-sort-merge": "^1.0.1",
-    "ts-sort-quick": "^1.0.1",
-    "ts-sort-radix": "^1.0.1",
-    "ts-sort-selection": "^1.0.1",
-    "ts-sort-shell": "^1.0.1"
+    "ts-sort-bubble": "^1.0.0",
+    "ts-sort-bucket": "^1.0.0",
+    "ts-sort-counting": "^1.0.0",
+    "ts-sort-heap": "^1.0.0",
+    "ts-sort-insertion": "^1.0.0",
+    "ts-sort-merge": "^1.0.0",
+    "ts-sort-quick": "^1.0.0",
+    "ts-sort-radix": "^1.0.0",
+    "ts-sort-selection": "^1.0.0",
+    "ts-sort-shell": "^1.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^10.0.0",

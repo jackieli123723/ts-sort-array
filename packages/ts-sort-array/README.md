@@ -42,11 +42,7 @@ yarn add  ts-sort-utils -D
 
 
 
-
-## Usages Api
-
-
-### cjs
+### Usages Api for  cjs
 
 ```js
     require("ts-sort-utils").bubbleSort,
@@ -82,7 +78,7 @@ yarn add  ts-sort-utils -D
 
 ```
 
-### es6
+### Usages Api for es6
 
 ```js
 import {
@@ -187,6 +183,62 @@ quickSortAsync([3,4,57,2,100,27,343]).then((res) => {
 
 
 ```
+
+
+
+## umd web browser use  [sync + callback + Promise + Async Await]
+
+```js
+
+<script src="https://unpkg.com/ts-sort-utils@1.0.1/umd/index.js"></script>
+
+tsSortUtils.bucketSort([3,4,57,2,100,27,343],function(data){
+    console.log("bucketSort cb",data.join('-'))// output: 2-3-4-27-57-100-343
+})
+
+console.log('bucketSortSync sync',tsSortUtils.bucketSortSync([3,4,57,2,100,27,343]))
+
+tsSortUtils.bucketSortAsync([3,4,57,2,100,27,343]).then((res) => {
+  console.log('bucketSortASync promise',res) // output: [2,3, 4, 27, 57,100,343]
+}).catch((error) => {
+  console.log('err',error)
+})
+
+(async function () {
+  var array4 = [3,4,57,2,100,27,343]
+  var les = await tsSortUtils.bucketSortAsync(array4)
+  console.log('bucketSortAsyncAwait await',les) // output: [2,3, 4, 27, 57,100,343]
+})()
+.....
+
+```
+
+
+
+## Dependencies Packages
+
+- `ts-sort-bubble` [GitHub repo](https://github.com/jackieli123723/ts-sort-array/blob/master/packages/bubbleSort/README.md), [NPM](https://www.npmjs.com/ts-sort-bubble)
+- `ts-sort-bucket` [GitHub repo](https://github.com/jackieli123723/ts-sort-array/blob/master/packages/bucketSort/README.md), [NPM](https://www.npmjs.com/ts-sort-bucket)
+
+- `ts-sort-counting` [GitHub repo](https://github.com/jackieli123723/ts-sort-array/blob/master/packages/countingSort/README.md), [NPM](https://www.npmjs.com/ts-sort-counting)
+
+- `ts-sort-heap` [GitHub repo](https://github.com/jackieli123723/ts-sort-array/blob/master/packages/heapSort/README.md), [NPM](https://www.npmjs.com/ts-sort-heap)
+
+- `ts-sort-insertion` [GitHub repo](https://github.com/jackieli123723/ts-sort-array/blob/master/packages/insertionSort/README.md), [NPM](https://www.npmjs.com/ts-sort-insertion)
+
+- `ts-sort-merge` [GitHub repo](https://github.com/jackieli123723/ts-sort-array/blob/master/packages/mergeSort/README.md), [NPM](https://www.npmjs.com/ts-sort-merge)
+
+- `ts-sort-quick` [GitHub repo](https://github.com/jackieli123723/ts-sort-array/blob/master/packages/quickSort/README.md), [NPM](https://www.npmjs.com/ts-sort-quick)
+
+- `ts-sort-radix` [GitHub repo](https://github.com/jackieli123723/ts-sort-array/blob/master/packages/radixSort/README.md), [NPM](https://www.npmjs.com/ts-sort-radix)
+
+- `ts-sort-selection` [GitHub repo](https://github.com/jackieli123723/ts-sort-array/blob/master/packages/selectionSort/README.md), [NPM](https://www.npmjs.com/ts-sort-selection)
+
+- `ts-sort-shell` [GitHub repo](https://github.com/jackieli123723/ts-sort-array/blob/master/packages/shellSort/README.md), [NPM](https://www.npmjs.com/ts-sort-shell)
+
+
+
+
 
 
 ## API 

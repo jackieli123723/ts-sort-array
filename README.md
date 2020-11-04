@@ -185,6 +185,36 @@ quickSortAsync([3,4,57,2,100,27,343]).then((res) => {
 ```
 
 
+
+## umd web browser use  [sync + callback + Promise + Async Await]
+
+```js
+
+<script src="https://unpkg.com/ts-sort-utils@1.0.1/umd/index.js"></script>
+
+tsSortUtils.bucketSort([3,4,57,2,100,27,343],function(data){
+    console.log("bucketSort cb",data.join('-'))// output: 2-3-4-27-57-100-343
+})
+
+console.log('bucketSortSync sync',tsSortUtils.bucketSortSync([3,4,57,2,100,27,343]))
+
+tsSortUtils.bucketSortAsync([3,4,57,2,100,27,343]).then((res) => {
+  console.log('bucketSortASync promise',res) // output: [2,3, 4, 27, 57,100,343]
+}).catch((error) => {
+  console.log('err',error)
+})
+
+(async function () {
+  var array4 = [3,4,57,2,100,27,343]
+  var les = await tsSortUtils.bucketSortAsync(array4)
+  console.log('bucketSortAsyncAwait await',les) // output: [2,3, 4, 27, 57,100,343]
+})()
+.....
+
+```
+
+
+
 ## Dependencies Packages
 
 - `ts-sort-bubble` [GitHub repo](https://github.com/jackieli123723/ts-sort-array/blob/master/packages/bubbleSort/README.md), [NPM](https://www.npmjs.com/ts-sort-bubble)
